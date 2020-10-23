@@ -1,12 +1,13 @@
 {
-  "name": "rest-shop",
+  "name": "node-rest-shop",
   "version": "1.0.0",
   "description": "A RESTful API created by following Maximillian's Youtube tutorial",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js",
-    "build": "npm install"
+    "build": "npm install",
+    "say-hello": "echo Hello World"
   },
   "repository": {
     "type": "git",

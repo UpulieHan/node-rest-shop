@@ -35,11 +35,11 @@ app.use((req, res, next) => {
     "Origin, X-Requested-With, Content-Type, Accept, Authorization"
   );
   //to send the browser's reply when we only want to see what headers we have
-  if (req.method === "OPTIONS") {
+  if (req.method == "OPTIONS") {
     res.header("Access-Control-Allow-Methods", "PUT, POST, PATCH, DELETE, GET");
     return res.status(200).json({});
   }
-  next();;
+  next();
 });
 
 //routes which should handle requests
