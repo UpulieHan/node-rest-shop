@@ -24,9 +24,9 @@
 
 ### 0.1. To run any of the scripts on package.json -> simply type 'npm run XXX' or 'npm XXX' (replace XXX by the script name)(scripts can do literally anything you want) (custom NPM scripts must be preceded by either run-script or run for them to be executed correctly)
 
-### 0.2. to install a package 'npm install <package-name>' or yarn add <package-name>
+### 0.2. to install a package 'npm install --save <package-name>' or yarn add --save <package-name>
 
-### 0.3. to install a dev package 'npm install --dev <package-name>' or yarn add --dev <package-name>
+### 0.3. to install a dev package 'npm install --save-dev <package-name>' or yarn add --save-dev <package-name>
 
 ### 1. Create a folder
 
