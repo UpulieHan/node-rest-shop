@@ -20,6 +20,8 @@ mongoose.connect(
 mongoose.Promise = global.Promise;
 //using morgan as a function
 app.use(morgan("dev"));
+//to make the uploads folder publically accessible(parses the url for /uploads and then make the image static)
+app.use("/uploads", express.static("uploads"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
