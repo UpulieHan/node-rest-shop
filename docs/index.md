@@ -26,8 +26,7 @@
 21. exec() turns a call in to a promise
 21. nesting should be avoided when using promises
 21. To parse form data bodies use multer, npm install --save multer
-22.
-23.
-24.
-25.
-26.
+22. JWT(JSON Web Token)=JSON data + Signature, npm i jsonwebtoken --save
+23. To install a hashing library (to store the password), npm i bcrypt --save
+  
+  YAY we did it!!
