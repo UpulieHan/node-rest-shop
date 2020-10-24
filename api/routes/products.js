@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
 const multer = require("multer");
+const checkAuth = require("../middleware/check-auth");
+
 //multer will execute this function whenever a new file is received (how file should get stored)
 //destination (where file should be stored)
 //filename (how file should be named)
@@ -76,7 +78,7 @@ router.get("/", (req, res, next) => {
 });
 
 //to post a product (in postman) (body->raw->{"name":"Water bottle large","price":"12.50"}-> JSON)
-router.post("/", upload.single("productImage"), (req, res, next) => {
+router.post("/", checkAuth, upload.single("productImage"), (req, res, next) => {
   console.log(req.file);
   const product = new Product({
     _id: new mongoose.Types.ObjectId(),
@@ -156,7 +158,7 @@ router.get("/:productId", (req, res, next) => {
 });
 
 //req body should be an array in key value pairs
-router.patch("/:productId", (req, res, next) => {
+router.patch("/:productId", checkAuth,(req, res, next) => {
   const id = req.params.productId;
   const updateOps = {};
   for (const ops of req.body) {
@@ -190,7 +192,7 @@ router.patch("/:productId", (req, res, next) => {
     });
 });
 
-router.delete("/:productId", (req, res, next) => {
+router.delete("/:productId",checkAuth, (req, res, next) => {
   const id = req.params.productId;
   Product.deleteOne({ _id: id })
     .exec()
