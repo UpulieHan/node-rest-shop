@@ -76,9 +76,9 @@
 
 ### 21. To parse form data bodies use multer, npm install --save multer
 
-### 21.
+### 21. JWT(JSON Web Token)=JSON data + Signature, npm i jsonwebtoken --save
 
-### 21.
+### 21. To install a hashing library (to store the password), npm i bcrypt --save
 
 ### 21.
 
